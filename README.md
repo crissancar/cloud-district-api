@@ -69,7 +69,7 @@ $ apt-get install --reinstall make
 
 1. Clone repository
 ```bash
-$ git clone https://github.com/crissancar/...
+$ git clone https://github.com/crissancar/cloud-district-api
 ```
 2. Install dependencies
 ```bash
@@ -88,7 +88,7 @@ $ make start_infrastructure
 ```
 _or_
 ```bash
-$ npm run docker:env
+$ npm run docker:build
 ```
 
 ### Database
@@ -117,11 +117,11 @@ $ make tests
 ```
 _or_
 ```bash
-$ npm run tests
+$ npm run test
 ```
 #### Acceptance tests
 ```bash
-$ make tests
+$ make tests_acceptance
 ```
 _or_
 ```bash
@@ -151,7 +151,7 @@ $ make tests_sync
 ```
 _or_
 ```bash
-$ npm run tests:sync
+$ npm run test:sync
 ```
 #### Acceptance tests
 ```bash
