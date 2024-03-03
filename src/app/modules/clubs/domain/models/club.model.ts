@@ -22,8 +22,6 @@ export class Club extends Timestamp {
 	}
 
 	static create(id: string, name: string, budget: string): Club {
-		const budgetBig = Big.createRoundedString(budget);
-
-		return new Club(id, name, budgetBig);
+		return new Club(id, name, budget);
 	}
 }
