@@ -1,3 +1,8 @@
+# environments
+.env
+.env.test
+
+
 # local history
 .history
 
