@@ -1,6 +1,7 @@
 import { ApiProperty } from '@nestjs/swagger';
-import { IsEmpty, IsNotEmpty, IsNumberString, IsOptional, IsString } from 'class-validator';
+import { IsNotEmpty, IsNumberString, IsOptional, IsString } from 'class-validator';
 
+import { TransformToRoundedString } from '../../../shared/infrastructure/decorators/transform-to-rounded-string.decorator';
 import { clubPropertiesSwagger } from '../../infrastructure/swagger/properties/club-properties.swagger';
 
 const { name, budget } = clubPropertiesSwagger;
@@ -17,5 +18,6 @@ export class CreateClubRequest {
 	@ApiProperty(budget)
 	@IsNotEmpty()
 	@IsNumberString()
+	@TransformToRoundedString()
 	readonly budget: string;
 }
