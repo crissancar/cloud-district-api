@@ -19,11 +19,11 @@
     * [Prerequisites](#prerequisites)
     * [Installation](#installation)
     * [Infrastructure](#infrastructure)
+    * [Environment](#environment)
     * [Database](#database)
     * [Running the app](#running-the-app)
     * [Running the tests (async)](#running-the-tests-async)
     * [Running the tests (sync)](#running-the-tests-sync)
-* [Postman](#postman)
 * [Documentation](#documentation)
 
 <!-- Technologies -->
@@ -90,6 +90,9 @@ _or_
 ```bash
 $ npm run docker:build
 ```
+
+### Environment
+Copy the ```.env``` and ```.env.test``` files into the root directory.
 
 ### Database
 This command creates databases, tables and inserts records.
@@ -177,10 +180,6 @@ _or_
 ```bash
 $ npm run test:integration:sync
 ```
-
-<!-- POSTMAN -->
-## Postman
-To get the **Postman collection and environment**, download the files *postman_collection.json* and *postman_environment.json* from the root directory and import them into **Postman**.
 
 <!-- DOCUMENTATION -->
 ## Documentation
