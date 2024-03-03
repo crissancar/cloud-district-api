@@ -113,6 +113,9 @@ _or_
 $ npm run start:dev
 ```
 
+### Endpoints documentation
+When the app is running, **Swagger** is operating at ```http://localhost:9977/documentation```
+
 ### Running the tests (async)
 #### All tests
 ```bash
