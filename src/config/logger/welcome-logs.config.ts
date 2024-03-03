@@ -10,6 +10,7 @@ const logger = LoggerFactory.create('');
 
 export class WelcomeLogs {
 	static apiUrl = api.url || `http://localhost:${api.port}`;
+	static documentationUrl = api.documentation.url;
 	static apiVersion = api.version;
 	static projectName = project.appName;
 	static environment = config.environment;
@@ -17,6 +18,7 @@ export class WelcomeLogs {
 
 	static run(): void {
 		logger.log(`${this.projectName} magic happens at ${this.apiUrl}/${this.apiVersion}`);
+		logger.log(`${this.projectName} documentation at ${this.documentationUrl}`);
 		logger.log(`Environment: ${this.environment}`);
 		if (this.showEnv) {
 			const skeletonAPIEnv = Object.fromEntries(
