@@ -1,0 +1,419 @@
+{
+	"info": {
+		"_postman_id": "9d06afcb-dc49-418e-a34c-1ad3ce83606b",
+		"name": "Cloud District - API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27642326"
+	},
+	"item": [
+		{
+			"name": "Clubs",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{API_KEY}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Atlético Madrid\",\n    \"budget\": \"50000000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/clubs",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"clubs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Find club players by criteria",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{API_KEY}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/clubs/{{CLUB}}/players?sortColumn=salary&sortOrder=ASC&take=10&page=1",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"clubs",
+								"{{CLUB}}",
+								"players"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Vinícius Júnior",
+									"disabled": true
+								},
+								{
+									"key": "keyword",
+									"value": "Jude",
+									"disabled": true
+								},
+								{
+									"key": "sortName",
+									"value": "Rodrygo Goes",
+									"disabled": true
+								},
+								{
+									"key": "sortColumn",
+									"value": "salary"
+								},
+								{
+									"key": "sortOrder",
+									"value": "ASC"
+								},
+								{
+									"key": "take",
+									"value": "10"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign player",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{API_KEY}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"salary\": \"25000000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/clubs/{{CLUB}}/players/50e649ab-b903-41d6-82f9-8987d00f08f9/sign",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"clubs",
+								"{{CLUB}}",
+								"players",
+								"50e649ab-b903-41d6-82f9-8987d00f08f9",
+								"sign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Release player",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{API_KEY}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/clubs/{{CLUB}}/players/50e649ab-b903-41d6-82f9-8987d00f08f9/release",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"clubs",
+								"{{CLUB}}",
+								"players",
+								"50e649ab-b903-41d6-82f9-8987d00f08f9",
+								"release"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Sign manager",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{API_KEY}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"salary\": \"5000000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/clubs/{{CLUB}}/managers/4d26d819-4d7d-4894-917a-086e60f5253c/sign",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"clubs",
+								"{{CLUB}}",
+								"managers",
+								"4d26d819-4d7d-4894-917a-086e60f5253c",
+								"sign"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Release manager",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{API_KEY}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{URL}}/clubs/{{CLUB}}/managers/b119e3af-4f79-419f-b25b-3dff0908109f/release",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"clubs",
+								"{{CLUB}}",
+								"managers",
+								"b119e3af-4f79-419f-b25b-3dff0908109f",
+								"release"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update budget",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{API_KEY}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"budget\": \"500000000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/clubs/{{CLUB}}",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"clubs",
+								"{{CLUB}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Players",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{API_KEY}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Kylian Mbappé\",\n    \"email\": \"kylianmbappe@gmail.com\",\n    \"nationality\": \"FR\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/players",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"players"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Managers",
+			"item": [
+				{
+					"name": "Create",
+					"request": {
+						"auth": {
+							"type": "apikey",
+							"apikey": [
+								{
+									"key": "value",
+									"value": "{{API_KEY}}",
+									"type": "string"
+								},
+								{
+									"key": "key",
+									"value": "Authorization",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Xabi Alonso\",\n    \"email\": \"xabialonso@gmail.com\",\n    \"nationality\": \"ES\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{URL}}/managers",
+							"host": [
+								"{{URL}}"
+							],
+							"path": [
+								"managers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
