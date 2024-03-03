@@ -11,7 +11,7 @@
   "scripts": {
     "build": "nest build",
     "database:build": "npm run typeorm:migration:run && npm run typeorm:migration:test:run && npm run typeorm:seed:run",
-    "docker:build": "docker-compose --file devops/docker/docker-compose.yml up --build",
+    "docker:build": "docker-compose --file devops/docker/docker-compose.yml up --build --detach",
     "docker:clean": "docker-compose --file devops/docker/docker-compose.yml down --rmi local --volumes --remove-orphans",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "lint": "eslint \"src/**/*.ts\" --fix",
