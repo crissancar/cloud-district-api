@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+  postgres:
+    container_name: cloud-district-postgres
+    image: "postgres:alpine"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: 'admin'
+      POSTGRES_PASSWORD: 'admin'
+    volumes:
+      - ../../artifacts/postgres:/var/lib/postgresql/data/
+      - ../../artifacts/sql/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - cloud-district-network
+  pgadmin:
+    container_name: cloud-district-pgadmin
+    image: "dpage/pgadmin4"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: 'admin@admin.com'
+      PGADMIN_DEFAULT_PASSWORD: 'admin'
+    ports:
+      - "5050:80"
+    networks:
+      - cloud-district-network
+
+networks:
+  cloud-district-network:
