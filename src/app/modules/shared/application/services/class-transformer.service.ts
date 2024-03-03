@@ -1,7 +1,5 @@
 import { ClassConstructor, plainToInstance } from 'class-transformer';
 
-import { CriteriaResult } from '../interfaces/criteria-result.interface';
-
 export class ClassTransformer {
 	static entityToModel<Entity, Model>(entity: Entity, model: ClassConstructor<Model>): Model {
 		return plainToInstance(model, entity);

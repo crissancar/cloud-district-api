@@ -2,10 +2,8 @@ import { Controller, Get, HttpCode, HttpStatus, Logger } from '@nestjs/common';
 import { ApiOkResponse, ApiOperation, ApiTags } from '@nestjs/swagger';
 
 import { config } from '../config/app';
-import { sharedConfigSwagger } from './modules/shared/infrastructure/swagger/shared-config.swagger';
 
-const { project, PWD } = config;
-const { security } = sharedConfigSwagger;
+const { project } = config;
 
 const logger = new Logger('AppController');
 

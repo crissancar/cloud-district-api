@@ -1,6 +1,5 @@
 import { Inject, Injectable } from '@nestjs/common';
 
-import { LoggerFactory } from '../../../shared/application/services/logger-factory.service';
 import { apiKeysConfig } from '../../api-keys.config';
 import { ApiKeyNotExistsException } from '../../domain/exceptions/api-key-not-exists.exception';
 import { ApiKeyRepository } from '../../domain/repositories/api-key.repository';

@@ -1,6 +1,5 @@
 import { Manager } from '../../../managers/domain/models/manager.model';
 import { Player } from '../../../players/domain/models/player.model';
-import { Big } from '../../../shared/application/services/big.service';
 import { Timestamp } from '../../../shared/domain/models/timestamp.model';
 
 export class Club extends Timestamp {
