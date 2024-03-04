@@ -21,12 +21,12 @@ export class WelcomeLogs {
 		logger.log(`${this.projectName} documentation at ${this.documentationUrl}`);
 		logger.log(`Environment: ${this.environment}`);
 		if (this.showEnv) {
-			const skeletonAPIEnv = Object.fromEntries(
-				Object.entries(process.env).filter(([key]) => /^SKELETON_API/.test(key)),
+			const cloudDistrictAPIEnv = Object.fromEntries(
+				Object.entries(process.env).filter(([key]) => /^CLOUD_DISTRICT/.test(key)),
 			);
 			logger.debug({
 				message: colorette.yellowBright('Cloud District API environment variables'),
-				...skeletonAPIEnv,
+				...cloudDistrictAPIEnv,
 			});
 		}
 	}
