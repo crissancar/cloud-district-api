@@ -1,7 +1,7 @@
 import { CreatePlayerRequest } from '../../../../../../src/app/modules/players/application/dtos/create-player-request.dto';
 import { Player } from '../../../../../../src/app/modules/players/domain/models/player.model';
 import { EmailMother } from '../../../shared/mothers/email.mother';
-import { FirstNameMother } from '../../../shared/mothers/first-name.mother';
+import { FullNameMother } from '../../../shared/mothers/full-name.mother';
 import { NationalityMother } from '../../../shared/mothers/nationality.mother';
 import { UuidMother } from '../../../shared/mothers/uuid.mother';
 
@@ -18,7 +18,7 @@ export class PlayerMother {
 
 	static random(): Player {
 		const id = UuidMother.random();
-		const name = FirstNameMother.random();
+		const name = FullNameMother.random();
 		const email = EmailMother.random();
 		const nationaility = NationalityMother.random();
 

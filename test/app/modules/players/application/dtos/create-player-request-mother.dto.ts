@@ -1,6 +1,6 @@
 import { CreatePlayerRequest } from '../../../../../../src/app/modules/players/application/dtos/create-player-request.dto';
 import { EmailMother } from '../../../shared/mothers/email.mother';
-import { FirstNameMother } from '../../../shared/mothers/first-name.mother';
+import { FullNameMother } from '../../../shared/mothers/full-name.mother';
 import { NationalityMother } from '../../../shared/mothers/nationality.mother';
 import { UuidMother } from '../../../shared/mothers/uuid.mother';
 
@@ -12,7 +12,7 @@ export class CreatePlayerRequestMother {
 	static random(): CreatePlayerRequest {
 		return this.create(
 			UuidMother.random(),
-			FirstNameMother.random(),
+			FullNameMother.random(),
 			EmailMother.random(),
 			NationalityMother.random(),
 		);

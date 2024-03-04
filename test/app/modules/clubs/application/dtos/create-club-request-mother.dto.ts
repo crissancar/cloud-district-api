@@ -1,5 +1,5 @@
 import { CreateClubRequest } from '../../../../../../src/app/modules/clubs/application/dtos/create-club-request.dto';
-import { FirstNameMother } from '../../../shared/mothers/first-name.mother';
+import { FullNameMother } from '../../../shared/mothers/full-name.mother';
 import { NumberMother } from '../../../shared/mothers/number.mother';
 import { UuidMother } from '../../../shared/mothers/uuid.mother';
 
@@ -11,7 +11,7 @@ export class CreateClubRequestMother {
 	static random(): CreateClubRequest {
 		return this.create(
 			UuidMother.random(),
-			FirstNameMother.random(),
+			FullNameMother.random(),
 			NumberMother.random(100000000, 900000000).toFixed(2),
 		);
 	}

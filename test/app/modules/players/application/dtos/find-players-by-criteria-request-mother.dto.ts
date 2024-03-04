@@ -2,7 +2,7 @@ import { FindPlayersByCriteriaRequest } from '../../../../../../src/app/modules/
 import { Player } from '../../../../../../src/app/modules/players/domain/models/player.model';
 import { SortColumn } from '../../../../../../src/app/modules/shared/domain/types/sort-column.type';
 import { SortOrder } from '../../../../../../src/app/modules/shared/domain/types/sort-order.type';
-import { FirstNameMother } from '../../../shared/mothers/first-name.mother';
+import { FullNameMother } from '../../../shared/mothers/full-name.mother';
 
 export class FindPlayersByCriteriaRequestMother {
 	static create(
@@ -27,7 +27,7 @@ export class FindPlayersByCriteriaRequestMother {
 	}
 
 	static random(clubId: string): FindPlayersByCriteriaRequest {
-		const name = FirstNameMother.random();
+		const name = FullNameMother.random();
 		const keyword = name;
 		const sortName = name;
 

@@ -1,7 +1,7 @@
 import { CreateManagerRequest } from '../../../../../../src/app/modules/managers/application/dtos/create-manager-request.dto';
 import { Manager } from '../../../../../../src/app/modules/managers/domain/models/manager.model';
 import { EmailMother } from '../../../shared/mothers/email.mother';
-import { FirstNameMother } from '../../../shared/mothers/first-name.mother';
+import { FullNameMother } from '../../../shared/mothers/full-name.mother';
 import { NationalityMother } from '../../../shared/mothers/nationality.mother';
 import { UuidMother } from '../../../shared/mothers/uuid.mother';
 
@@ -18,7 +18,7 @@ export class ManagerMother {
 
 	static random(): Manager {
 		const id = UuidMother.random();
-		const name = FirstNameMother.random();
+		const name = FullNameMother.random();
 		const email = EmailMother.random();
 		const nationaility = NationalityMother.random();
 
